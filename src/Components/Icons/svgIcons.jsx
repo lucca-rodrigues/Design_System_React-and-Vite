@@ -1,4 +1,6 @@
 /* eslint-disable react/no-unknown-property */
+import React from "react";
+
 export function CostCenterIcon({ size }) {
   return (
     <svg

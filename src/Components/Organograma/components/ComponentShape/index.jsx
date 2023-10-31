@@ -1,7 +1,8 @@
+import React from "react";
 import { Icon } from "@mui/material";
 
 import { BusinessItem, ContainerGroup } from "../../styles";
-import "../../styles.css";
+
 import { CostCenterIcon, BranchIcon, BusinessUnitIcon, DepartmentIcon, SimpleIcon, SearchIcon } from "../../../Icons";
 
 export default function ComponentShape({ item, name, level, category, x, y, handleClick, divisionsData }) {

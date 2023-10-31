@@ -1,5 +1,5 @@
+import React, { useEffect, useRef, useState } from "react";
 import PropTypes from "prop-types";
-import { useEffect, useRef, useState } from "react";
 import ComponentShape from "./components/ComponentShape";
 import "./styles.css";
 export default function Organograma({ title, divisionsData, handleClick, ...rest }) {
@@ -54,7 +54,7 @@ export default function Organograma({ title, divisionsData, handleClick, ...rest
   }, [zoomLevel]);
   return (
     <div style={{ fontFamily: `"Roboto", "Helvetica", "Arial", sans-serif` }}>
-      {title && <h1>{title}</h1>}
+      {title && <h1 data-testid="title">{title}</h1>}
       <div
         style={{
           width: "100%",
@@ -85,6 +85,7 @@ export default function Organograma({ title, divisionsData, handleClick, ...rest
                 category={item?.segmentationType?.value}
                 handleClick={(value) => handleClick(value)}
                 divisionsData={divisionsData}
+                data-testid="matriz-item"
               />
               {item?.branches?.map((levelTwo, index) => (
                 <div
@@ -94,6 +95,7 @@ export default function Organograma({ title, divisionsData, handleClick, ...rest
                     marginLeft: "200px",
                     minHeight: item?.branches.length > 0 ? item?.branches.length + 1 * "250px" : "350px",
                   }}
+                  data-testid="branches-level-one"
                 >
                   <ComponentShape
                     item={levelTwo}
