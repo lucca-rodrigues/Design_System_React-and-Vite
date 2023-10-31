@@ -5,3 +5,4 @@ public
 dist/main.js
 dist/index.html
 dist/App.js
+.npmrc
