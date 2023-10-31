@@ -20,6 +20,14 @@ export default function ComponentShape({ item, name, level, category, x, y, hand
     Simple: <SimpleIcon size={30} />,
   };
 
+  const categoryLabels = {
+    Matriz: "Matriz",
+    Branch: "Filial",
+    CostCenter: "Centro de Custo",
+    BusinessUnit: "Unidade de Negócio",
+    Department: "Departamento",
+  };
+
   return (
     <ContainerGroup className="group" category={category} x={x} y={y}>
       {level !== "levelOne" && (
@@ -42,7 +50,7 @@ export default function ComponentShape({ item, name, level, category, x, y, hand
           )}
           <div className="business-division-item-branch">
             <div className="business-descriptions">
-              <div className="business-category">{category}</div>
+              <div className="business-category">{categoryLabels[category]}</div>
               <div className="business-name" style={{ color: categoryColors[category] ?? "#4E4E4E" }}>
                 {name}
               </div>
