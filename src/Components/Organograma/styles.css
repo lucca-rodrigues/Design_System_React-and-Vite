@@ -1,5 +1,19 @@
+/* @import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"); */
+
+@font-face {
+  font-family: "CVale_Fidelidade";
+  src: url("../../assets/fonts/CVale_Fidelidade.eot?n95swn");
+  src: url("../../assets/fonts/CVale_Fidelidade.eot?n95swn#iefix") format("embedded-opentype"),
+    url("../../assets/fonts/CVale_Fidelidade.ttf?n95swn") format("truetype"), url("../../assets/fonts/CVale_Fidelidade.woff?n95swn") format("woff"),
+    url("../../assets/fonts/CVale_Fidelidade.svg?n95swn#CVale_Fidelidade") format("svg");
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
 .levelOne {
   /* border-left: 2px dashed #707070; */
+  /* font-family: "Nunito Sans", "Helvetica Neue", Helvetica, Arial, sans-serif; */
+  font-family: "CVale_Fidelidade", sans-serif;
 }
 
 .levelTwo,
@@ -86,6 +100,9 @@
   background-repeat: no-repeat;
   background-position: center;
   background-color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 .matrix-division {
   width: 80px;
@@ -146,6 +163,7 @@
   border-radius: 5px;
   display: flex !important;
   align-items: center;
+  justify-content: center;
 }
 
 .button-details:hover {

@@ -1,7 +1,7 @@
 import PropTypes from "prop-types";
 import { useEffect, useRef, useState } from "react";
 import ComponentShape from "./components/ComponentShape";
-
+import "./styles.css";
 export default function Organograma({ title, divisionsData, handleClick, ...rest }) {
   const [zoomLevel, setZoomLevel] = useState(1);
   const [panX, setPanX] = useState(0);
@@ -53,8 +53,8 @@ export default function Organograma({ title, divisionsData, handleClick, ...rest
     }
   }, [zoomLevel]);
   return (
-    <>
-      <h1>{title}</h1>
+    <div style={{ fontFamily: `"Roboto", "Helvetica", "Arial", sans-serif` }}>
+      {title && <h1>{title}</h1>}
       <div
         style={{
           width: "100%",
@@ -163,12 +163,15 @@ export default function Organograma({ title, divisionsData, handleClick, ...rest
           ))}
         </div>
       </div>
-    </>
+    </div>
   );
 }
 
 Organograma.propTypes = {
-  title: PropTypes.string.isRequired,
+  title: PropTypes.string,
+  divisionsData: PropTypes.array.isRequired,
+  handleClick: PropTypes.func,
+  rest: PropTypes.object,
 };
 Organograma.defaultProps = {
   title: "Organograma da empresa",

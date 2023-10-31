@@ -1,0 +1,14 @@
+@font-face {
+  font-family: "CVale_Fidelidade";
+  src: url("../src/assets/fonts/CVale_Fidelidade.eot?n95swn");
+  src: url("../src/assets/fonts/CVale_Fidelidade.eot?n95swn#iefix") format("embedded-opentype"),
+    url("../src/assets/fonts/CVale_Fidelidade.ttf?n95swn") format("truetype"), url("../src/assets/fonts/CVale_Fidelidade.woff?n95swn") format("woff"),
+    url("../src/assets/fonts/CVale_Fidelidade.svg?n95swn#CVale_Fidelidade") format("svg");
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+body {
+  font-family: "CVale_Fidelidade", sans-serif;
+}

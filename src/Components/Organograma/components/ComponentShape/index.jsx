@@ -1,8 +1,7 @@
-import React from "react";
 import { Icon } from "@mui/material";
 
 import { BuusinessItem, ContainerGroup } from "../../styles";
-import "../styles.css";
+import "../../styles.css";
 import { CostCenterIcon, BranchIcon, BusinessUnitIcon, DepartmentIcon, SimpleIcon, SearchIcon } from "../../../Icons";
 
 export default function ComponentShape({ item, name, level, category, x, y, handleClick, divisionsData }) {
@@ -14,11 +13,11 @@ export default function ComponentShape({ item, name, level, category, x, y, hand
   };
 
   const categoryImage = {
-    Branch: BranchIcon,
-    CostCenter: CostCenterIcon,
-    BusinessUnit: BusinessUnitIcon,
-    Department: DepartmentIcon,
-    Simple: SimpleIcon,
+    Branch: <BranchIcon size={30} />,
+    CostCenter: <CostCenterIcon size={30} />,
+    BusinessUnit: <BusinessUnitIcon size={30} />,
+    Department: <DepartmentIcon size={30} />,
+    Simple: <SimpleIcon size={30} />,
   };
 
   return (
@@ -34,7 +33,7 @@ export default function ComponentShape({ item, name, level, category, x, y, hand
         <div className="indicator-color" style={{ backgroundColor: categoryColors[category] ?? "#73BDCE" }} />
         <BuusinessItem className="business-division-item">
           {category !== "Matriz" ? (
-            <div className="division-icon" style={{ backgroundImage: `url(${categoryImage[category]}` }} />
+            <div className="division-icon">{categoryImage[category]}</div>
           ) : (
             <>
               {/* Add Logo Matrix here */}
