@@ -1,6 +1,6 @@
 import { Icon } from "@mui/material";
 
-import { BuusinessItem, ContainerGroup } from "../../styles";
+import { BusinessItem, ContainerGroup } from "../../styles";
 import "../../styles.css";
 import { CostCenterIcon, BranchIcon, BusinessUnitIcon, DepartmentIcon, SimpleIcon, SearchIcon } from "../../../Icons";
 
@@ -39,7 +39,7 @@ export default function ComponentShape({ item, name, level, category, x, y, hand
 
       <div className="business-division">
         <div className="indicator-color" style={{ backgroundColor: categoryColors[category] ?? "#73BDCE" }} />
-        <BuusinessItem className="business-division-item">
+        <BusinessItem className="business-division-item">
           {category !== "Matriz" ? (
             <div className="division-icon">{categoryImage[category]}</div>
           ) : (
@@ -61,7 +61,7 @@ export default function ComponentShape({ item, name, level, category, x, y, hand
               </Icon>
             )}
           </div>
-        </BuusinessItem>
+        </BusinessItem>
       </div>
     </ContainerGroup>
   );

@@ -12,7 +12,7 @@ export const Icon = styled.div`
   cursor: pointer;
 `;
 
-export const BuusinessItem = styled.div`
+export const BusinessItem = styled.div`
   padding: 10px 15px;
   border: 2px solid #dfdfdf;
   border-radius: 50px;
