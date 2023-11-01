@@ -13,21 +13,6 @@ describe("Organograma", () => {
     expect(title.textContent).toEqual("Organograma");
   });
 
-  // it("should be render component matriz", async () => {
-  //   const data = [
-  //     {
-  //       name: "Vexpro IT",
-  //       segmentationType: { key: "1", value: "Matriz" },
-  //       branches: [],
-  //     },
-  //   ];
-  //   render(<Organograma divisionsData={data} />);
-
-  //   const title = await screen.findAllByTestId("matriz-item");
-
-  //   // expect(title.textContent).toEqual("Organograma");
-  // });
-
   it("should be render component branches", async () => {
     const data = [
       {
